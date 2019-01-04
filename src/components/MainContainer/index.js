@@ -15,8 +15,8 @@ export default function MainContainer(props) {
 		border-radius: 5px;
 		padding: 20px;
 		font: 150%/1.3 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
-        grid-column: ${props => props.cs || 'auto'} / ${props => props.ce || 'auto'};
-        grid-row: ${props => props.rs || 'auto'} / ${props => props.re || 'auto'};
+        grid-column: ${props => (props.cs || 'auto' ) + '/' + (props.ce || 'auto') };
+        grid-row: ${props => (props.rs || 'auto' ) + '/' + (props.re || 'auto') };
     `;
     return (
         <MainContainerStyle>
