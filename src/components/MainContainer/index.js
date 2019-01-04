@@ -18,15 +18,13 @@ export default function MainContainer(props) {
         grid-column: ${props => (props.cs || 'auto' ) + '/' + (props.ce || 'auto') };
         grid-row: ${props => (props.rs || 'auto' ) + '/' + (props.re || 'auto') };
     `;
+    
     return (
         <MainContainerStyle>
-            <Box cs={1} ce={2} rs={1} re={2}> A </Box>
-            <Box cs={3} ce={4} rs={1} re={2}> B </Box>
-            <Box cs={5} ce={6} rs={1} re={2}> C </Box>
-            <Box cs={1} ce={2} rs={3} re={4}> D </Box>
-            <Box cs={3} ce={4} rs={3} re={4}> E </Box>
-            <Box cs={5} ce={6} rs={3} re={4}> F </Box>
-
+            <Box cs={1} ce={4} rs={1} re={2}> A </Box>
+            <Box cs={5} ce={6} rs={1} re={4}> B </Box>
+            <Box cs={1} ce={2} rs={3} re={4}> C </Box>
+            <Box cs={3} ce={4} rs={3} re={4}> D </Box>
         </MainContainerStyle>
     );
 }
