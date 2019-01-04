@@ -18,16 +18,16 @@ export default function MainContainer(props) {
 		border-radius: 5px;
 		padding: 20px;
 		font: 150%/1.3 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
-        grid-column: ${props => (props.cs || 'auto' ) + '/' + (props.ce || 'auto') };
-        grid-row: ${props => (props.rs || 'auto' ) + '/' + (props.re || 'auto') };
+        grid-column: ${props => (props.cs || 'auto' ) + '/ span ' + (props.cspan || 1) };
+        grid-row: ${props => (props.rs || 'auto' ) + '/ span ' + (props.rspan || 1) };
     `;
 
     return (
         <MainContainerStyle>
-            <Box cs={1} ce={3} rs={1} re={2}> A </Box>
-            <Box cs={3} ce={4} rs={1} re={3}> B </Box>
-            <Box cs={1} ce={2} rs={2} re={3}> C </Box>
-            <Box cs={2} ce={3} rs={2} re={3}> D </Box>
+            <Box cs={1} ce={3} cspan={2}> A </Box>
+            <Box cs={3} ce={4} rspan={2}> B </Box>
+            <Box cs={1} rs={2}> C </Box>
+            <Box cs={2} rs={2}> D </Box>
         </MainContainerStyle>
     );
 }
