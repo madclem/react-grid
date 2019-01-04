@@ -3,14 +3,17 @@ import styled from 'styled-components';
 
 export default function MainContainer(props) {
     const MainContainerStyle = styled.div`
-        margin: auto;
+        justify-content: center;	
         display: grid;
-        grid-template-columns: 100px 10px 100px 10px 100px;
-        grid-template-rows: auto 10px auto;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
     `;
     const Box = styled.div`
         background-color: rgb(120,70,123);
-		border: 5px solid rgb(88,55,112);
+        border: 5px solid rgb(88,55,112);
+        // height: 100px;
 		color: #fff;
 		border-radius: 5px;
 		padding: 20px;
@@ -18,13 +21,13 @@ export default function MainContainer(props) {
         grid-column: ${props => (props.cs || 'auto' ) + '/' + (props.ce || 'auto') };
         grid-row: ${props => (props.rs || 'auto' ) + '/' + (props.re || 'auto') };
     `;
-    
+
     return (
         <MainContainerStyle>
-            <Box cs={1} ce={4} rs={1} re={2}> A </Box>
-            <Box cs={5} ce={6} rs={1} re={4}> B </Box>
-            <Box cs={1} ce={2} rs={3} re={4}> C </Box>
-            <Box cs={3} ce={4} rs={3} re={4}> D </Box>
+            <Box cs={1} ce={3} rs={1} re={2}> A </Box>
+            <Box cs={3} ce={4} rs={1} re={3}> B </Box>
+            <Box cs={1} ce={2} rs={2} re={3}> C </Box>
+            <Box cs={2} ce={3} rs={2} re={3}> D </Box>
         </MainContainerStyle>
     );
 }
