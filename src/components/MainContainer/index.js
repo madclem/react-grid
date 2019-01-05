@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import cssVars from '../../styles/cssVars';
 
 export default function MainContainer(props) {
     const MainContainerStyle = styled.div`
         width: 90%;
         display: grid;
+        color: ${cssVars.rougechelou};
         margin: 0 auto 0 auto;
         grid-template-columns: 9fr 3fr;
         grid-template-rows: auto;
         grid-column-gap: 40px;
-        color: ${(props)=> props.theme.secondaryColor}
         grid-template-areas:
             "header header"
             "content sidebar"
@@ -24,7 +25,6 @@ export default function MainContainer(props) {
         grid-area: header;
         background-color: #eee;
         border: 1px solid #ccc;
-        color: ${(props)=> props.theme.primaryColor}
     `;
 
     const Content = styled(Box)`
