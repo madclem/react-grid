@@ -1,5 +1,7 @@
 import React from 'react';
 import MainContainer from './components/MainContainer';
+import DefaultTheme from './themes/DefaultTheme';
+import { ThemeProvider } from 'styled-components';
 
 // Routes
 // menu
@@ -10,7 +12,9 @@ import MainContainer from './components/MainContainer';
 function App(props) {
   return (
     <React.Fragment>
-      <MainContainer />
+      <ThemeProvider theme={DefaultTheme}>
+        <MainContainer />
+      </ThemeProvider>
     </React.Fragment>
   );
 }

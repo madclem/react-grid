@@ -9,7 +9,7 @@ export default function MainContainer(props) {
         grid-template-columns: 9fr 3fr;
         grid-template-rows: auto;
         grid-column-gap: 40px;
-        // grid-row-gap: 10px;
+        color: ${(props)=> props.theme.secondaryColor}
         grid-template-areas:
             "header header"
             "content sidebar"
@@ -17,7 +17,6 @@ export default function MainContainer(props) {
     `;
 
     const Box = styled.div`
-        color: #000;
         padding: 10px;
     `;
 
@@ -25,6 +24,7 @@ export default function MainContainer(props) {
         grid-area: header;
         background-color: #eee;
         border: 1px solid #ccc;
+        color: ${(props)=> props.theme.primaryColor}
     `;
 
     const Content = styled(Box)`
